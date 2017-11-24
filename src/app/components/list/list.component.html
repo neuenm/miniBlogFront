@@ -1,0 +1,17 @@
+<div class="ui container">
+  <h2 class="ui center aligned icon header">
+    <i class="list layout icon"></i>
+    Posts:
+  </h2>
+  <div class="ui card fluid" *ngFor="let item of posts  |paginate: { itemsPerPage:10,currentPage:p } ">
+    <h2 class="ui header" >
+      <i class="angle double right icon"></i>
+      <div class="content">
+        Titulo: {{item.title}}
+      </div>
+    </h2>
+    <p>Contenido {{item.description}}</p>
+    <button  class="ui button" (click)=deletePost(item.id)  type="button" name="button">Borrar</button>
+  </div>
+  <pagination-controls (pageChange)="p=$event" ></pagination-controls>
+</div>

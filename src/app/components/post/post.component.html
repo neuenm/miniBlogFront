@@ -1,0 +1,21 @@
+<div class="ui container">
+  <h2 class="ui center aligned icon header">
+      <i class="edit icon"></i>
+      Nuevo Post:
+    </h2>
+  <div class="ui segment">
+    <form novalidate>
+      <div class="ui form">
+        <label>Titulo</label>
+        <div class="ui fluid input">
+          <input placeholder="Titulo del Post" type="text" name="title" [(ngModel)]="title" required>
+        </div>
+        <div class="field">
+          <label>Short Text</label>
+          <textarea name="description" [(ngModel)]="description" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="ui button" (click)="nuevoPost()"  name="button">Crear Post</button>
+    </form>
+  </div>
+</div>
